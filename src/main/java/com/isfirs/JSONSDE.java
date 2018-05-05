@@ -11,25 +11,94 @@ import org.apache.http.util.EntityUtils;
 
 public class JSONSDE {
 
+    /**
+     * JSONSDE Host
+     */
     private static final String JSONSDE_HOST = "http://sde.zzeve.com";
 
+    /**
+     * All tables endpoint.
+     */
     private static final String TABLES = "/tables.json";
 
+    /**
+     * Agents
+     */
     private static final String agt_AGENT_TYPES = "/agtAgentTypes.json";
+
+    /**
+     * Research Agents
+     */
     private static final String agt_RESEARCH_AGENTS = "/agtResearchAgents.json";
+
+    /**
+     * Certitifactes
+     */
     private static final String cert_CERTS = "/certCerts.json";
+
+    /**
+     * Masteries
+     */
     private static final String cert_MASTERIES = "/certMasteries.json";
+
+    /**
+     * Skills
+     */
     private static final String cert_SKILLS = "/certSkills.json";
+
+    /**
+     * Ancestries
+     */
     private static final String chr_ANCESTRIES = "/chrAncestries.json";
+
+    /**
+     * Attributes
+     */
     private static final String chr_ATTRIBUTES = "/chrAttributes.json";
+
+    /**
+     * Bloodlines
+     */
     private static final String chr_BLOODLINES = "/chrBloodlines.json";
+
+    /**
+     * Factions
+     */
     private static final String chr_FACTIONS = "/chrFactions.json";
+
+    /**
+     * Races
+     */
     private static final String chr_RACES = "/chrRaces.json";
+
+    /**
+     * Corp Activities
+     */
     private static final String crp_ACTIVITIES = "/crpActivities.json";
+
+    /**
+     * Npc Corporation Division
+     */
     private static final String crp_NPC_CORPORATION_DIVISIONS = "/crpNPCCorporationDivisions.json";
+
+    /**
+     * Npc Corporation Research Fields
+     */
     private static final String crp_NPC_CORPORATION_RESEARCH_FIELDS = "/crpNPCCorporationResearchFields.json";
+
+    /**
+     * Npc Corporation Trades
+     */
     private static final String crp_NPC_CORPORATION_TRADES = "/crpNPCCorporationTrades.json";
+
+    /**
+     * Npc Corporations
+     */
     private static final String crp_NPC_CORPORATIONS = "/crpNPCCorporations.json";
+
+    /**
+     * Npc Divisions
+     */
     private static final String crp_NPC_DIVISIONS = "/crpNPCDivisions.json";
     private static final String dgm_ATTRIBUTE_CATEGORIES = "/dgmAttributeCategories.json";
     private static final String dgm_ATTRIBUTE_TYPES = "/dgmAttributeTypes.json";

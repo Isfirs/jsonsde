@@ -2,15 +2,18 @@ package com.isfirs.json;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.ToString;
 
+@ToString
 public class ResearchAgent {
 
-    private int agentID;
+    private final int agentID;
 
-    private int typeID;
+    private final int typeID;
 
     @JsonCreator
-    public ResearchAgent(@JsonProperty("agentID") int agentID, @JsonProperty("typeID") int typeID) {
+    public ResearchAgent(@JsonProperty("agentID") final int agentID,
+                         @JsonProperty("typeID") final int typeID) {
         this.agentID = agentID;
         this.typeID = typeID;
     }

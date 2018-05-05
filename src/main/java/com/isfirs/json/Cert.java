@@ -2,7 +2,11 @@ package com.isfirs.json;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.ToString;
 
+@Getter
+@ToString
 public class Cert {
 
     private final int certID;
@@ -15,40 +19,14 @@ public class Cert {
 
     @JsonCreator
     public Cert(
-            @JsonProperty("certID") int certID,
-            @JsonProperty("description") String description,
-            @JsonProperty("groupID") int groupID,
-            @JsonProperty("name") String name) {
+            @JsonProperty("certID") final int certID,
+            @JsonProperty("description") final String description,
+            @JsonProperty("groupID") final int groupID,
+            @JsonProperty("name") final String name) {
         this.certID = certID;
         this.description = description;
         this.groupID = groupID;
         this.name = name;
-    }
-
-    public int getCertID() {
-        return certID;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getGroupID() {
-        return groupID;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Cert{" +
-                "certID=" + certID +
-                ", description='" + description + '\'' +
-                ", groupID=" + groupID +
-                ", name='" + name + '\'' +
-                '}';
     }
 
 }

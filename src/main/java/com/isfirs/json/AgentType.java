@@ -2,25 +2,22 @@ package com.isfirs.json;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.ToString;
 
+@Getter
+@ToString
 public class AgentType {
 
-    private int agentTypeID;
+    private final int agentTypeID;
 
-    private String agentType;
+    private final String agentType;
 
     @JsonCreator
-    public AgentType(@JsonProperty("agentTypeID") int agentTypeID, @JsonProperty("agentType") String agentType) {
+    public AgentType(@JsonProperty("agentTypeID") final int agentTypeID,
+                     @JsonProperty("agentType") final String agentType) {
         this.agentTypeID = agentTypeID;
         this.agentType = agentType;
-    }
-
-    @Override
-    public String toString() {
-        return "AgentType{" +
-                "agentTypeID=" + agentTypeID +
-                ", agentType='" + agentType + '\'' +
-                '}';
     }
 
 }

@@ -2,7 +2,11 @@ package com.isfirs.json;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.ToString;
 
+@Getter
+@ToString
 public class Ancestry {
 
     private final int ancestryID;
@@ -25,17 +29,17 @@ public class Ancestry {
 
     @JsonCreator
     public Ancestry(
-            @JsonProperty("ancestryID") int ancestryID,
-            @JsonProperty("ancestryName") String ancestryName,
-            @JsonProperty("bloodlineID") int bloodlineID,
-            @JsonProperty("description") String description,
-            @JsonProperty("perception") int perception,
-            @JsonProperty("willpower") int willpower,
-            @JsonProperty("charisma") int charisma,
-            @JsonProperty("memory") int memory,
-            @JsonProperty("intelligence") int intelligence,
-            @JsonProperty("iconID") int iconID,
-            @JsonProperty("shortDescription") String shortDescription) {
+            @JsonProperty("ancestryID") final int ancestryID,
+            @JsonProperty("ancestryName") final String ancestryName,
+            @JsonProperty("bloodlineID") final int bloodlineID,
+            @JsonProperty("description") final String description,
+            @JsonProperty("perception") final int perception,
+            @JsonProperty("willpower") final int willpower,
+            @JsonProperty("charisma") final int charisma,
+            @JsonProperty("memory") final int memory,
+            @JsonProperty("intelligence") final int intelligence,
+            @JsonProperty("iconID") final int iconID,
+            @JsonProperty("shortDescription") final String shortDescription) {
         this.ancestryID = ancestryID;
         this.ancestryName = ancestryName;
         this.bloodlineID = bloodlineID;
@@ -47,67 +51,6 @@ public class Ancestry {
         this.intelligence = intelligence;
         this.iconID = iconID;
         this.shortDescription = shortDescription;
-    }
-
-    public int getAncestryID() {
-        return ancestryID;
-    }
-
-    public String getAncestryName() {
-        return ancestryName;
-    }
-
-    public int getBloodlineID() {
-        return bloodlineID;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getPerception() {
-        return perception;
-    }
-
-    public int getWillpower() {
-        return willpower;
-    }
-
-    public int getCharisma() {
-        return charisma;
-    }
-
-    public int getMemory() {
-        return memory;
-    }
-
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-    public int getIconID() {
-        return iconID;
-    }
-
-    public String getShortDescription() {
-        return shortDescription;
-    }
-
-    @Override
-    public String toString() {
-        return "Ancestry{" +
-                "ancestryID=" + ancestryID +
-                ", ancestryName='" + ancestryName + '\'' +
-                ", bloodlineID=" + bloodlineID +
-                ", description='" + description + '\'' +
-                ", perception=" + perception +
-                ", willpower=" + willpower +
-                ", charisma=" + charisma +
-                ", memory=" + memory +
-                ", intelligence=" + intelligence +
-                ", iconID=" + iconID +
-                ", shortDescription='" + shortDescription + '\'' +
-                '}';
     }
 
 }
